@@ -3,6 +3,11 @@
   font: inherit;
 }
 
+/* Sections */
+.secao-carta{
+  padding-bottom: 25rem;
+}
+
 *,
 *::before,
 *::after {
@@ -16,6 +21,9 @@ svg {
   height: auto;
   max-width: 100%;
 }
+
+
+
 
 b {
   font-weight: bold !important;
@@ -34,22 +42,31 @@ h3 {
   text-wrap: balance;
 }
 
+h2{
+  font-size: 1.5rem;
+}
+
 p {
   text-wrap: pretty;
 }
 
 main {
+  margin-top: 15rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 2rem 1rem;
 }
+
 
 .container-carta {
   position: relative;
 }
+
+
+
 
 .capa {
   position: absolute;
@@ -85,7 +102,8 @@ main {
 
 .opcoes {
   display: flex;
-  gap: 5rem;
+  padding-top: 3rem;
+  gap: 10rem;
 }
 
 .opcoes button {
@@ -156,12 +174,8 @@ main {
 }
 
 
-
-
-
-
-
-media (max-width: 500px) {
+/* Adicione isso no final do CSS */
+@media (max-width: 500px) {
   main {
     gap: 2rem;
     padding: 1rem;
@@ -182,11 +196,11 @@ media (max-width: 500px) {
   }
 
   .papel {
-    width: 90vw;
+    width: 89vw;
     height: auto;
     padding: 1rem;
-    font-size: 16px;
-    line-height: 1.4;
+    font-size: 15px;
+    line-height: 1.0;
     right: 0;
     left: 0;
     margin: 0 auto;
@@ -195,7 +209,7 @@ media (max-width: 500px) {
   .coracao {
     top: 30%;
     left: 45%;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 
   .opcoes {
@@ -215,7 +229,7 @@ media (max-width: 500px) {
       top: 0;
     }
     100% {
-      top: -22vw;
+      top: -40vw;
     }
   }
 
@@ -229,3 +243,269 @@ media (max-width: 500px) {
   }
 }
 
+
+
+
+
+
+/* 
+Galeria :
+*/
+
+.galeria {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.slider {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #fe3334;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: none;
+}
+
+.slide.ativa {
+  display: block;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(90, 88, 88, 0.425);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+/* Texto Galeria  */
+
+.texto-pos-galeria {
+  position: relative;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #ffe4ea;
+  border-radius: 12px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+  color: #000000;
+  line-height: 1.6;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 45, 85, 0.2);
+  overflow: hidden;
+}
+
+.coracoes-animados {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.coracoes-animados span {
+  position: absolute;
+  font-size: 1.5rem;
+  animation: subirCoracao 6s linear infinite;
+  opacity: 0.7;
+}
+
+/* Gera posições e tempos diferentes */
+.coracoes-animados span:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+.coracoes-animados span:nth-child(2) {
+  left: 30%;
+  animation-delay: 2s;
+}
+.coracoes-animados span:nth-child(3) {
+  left: 50%;
+  animation-delay: 1s;
+}
+.coracoes-animados span:nth-child(4) {
+  left: 70%;
+  animation-delay: 3s;
+}
+.coracoes-animados span:nth-child(5) {
+  left: 85%;
+  animation-delay: 1.5s;
+}
+
+@keyframes subirCoracao {
+  0% {
+    bottom: -10%;
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-50px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    bottom: 110%;
+    transform: translateY(-100px) scale(0.9);
+    opacity: 0;
+  }
+}
+
+
+
+
+/* Exaltando ela */
+
+
+.exaltacao-beleza {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fff0f5;
+  border-radius: 16px;
+  text-align: center;
+  color: #000000;
+  font-family: 'Kode Mono', cursive;
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.2);
+}
+
+
+.exaltacao-beleza h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.exaltacao-beleza p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.7;
+}
+
+.galeria-beleza {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.galeria-beleza img {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.galeria-beleza img:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+ .chuva-de-coracoes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+  }
+  .cora { 
+    position: absolute;
+    color: #ff4d6d;
+    animation: cair 6s linear infinite;
+    font-size: 1.5rem;
+  }
+  @keyframes cair {
+    to {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+
+
+
+
+
+  .polaroids {
+    text-align: center;
+    padding: 2rem;
+  }
+  .grid-polaroids {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .polaroid {
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffc1cc;
+    border-radius: 10px;
+    max-width: 180px;
+  }
+  .polaroid img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .polaroid p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+
+
+
+
+  .futuro {
+    background-color: #ffe4ec;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 10px #fe9aa3;
+  }
+  .futuro h2 {
+    font-size: 1.8rem;
+    color: #e63950;
+  }
+  .futuro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+  }
