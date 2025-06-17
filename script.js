@@ -98,3 +98,31 @@ botaoFechar.addEventListener('click', () => {
     chuva.appendChild(coracao);
     setTimeout(() => coracao.remove(), 6000);
   }, 300);
+
+
+
+
+   const audio = document.getElementById('musicaDeFundo');
+    const btn = document.getElementById('playAudioBtn');
+
+    function tocarAudio() {
+      audio.play().then(() => {
+        localStorage.setItem('musicaAtiva', 'true');
+        btn.style.display = 'none';
+      }).catch(() => {
+        btn.style.display = 'block'; // se não conseguiu tocar, mostra botão
+      });
+    }
+
+    // Tenta tocar no carregamento se já ativou antes
+    window.addEventListener('load', () => {
+      if (localStorage.getItem('musicaAtiva') === 'true') {
+        tocarAudio();
+      } else {
+        btn.style.display = 'block';
+      }
+    });
+
+    btn.addEventListener('click', () => {
+      tocarAudio();
+    });

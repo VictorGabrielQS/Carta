@@ -431,6 +431,16 @@ button.next {
 
 
 
+/* Playlist */
+
+  .playlist h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #e63950;
+  }
+
+
+
 
 
  .chuva-de-coracoes {
@@ -459,11 +469,13 @@ button.next {
 
 
 
+/* Polaroids */
 
 
   .polaroids {
     text-align: center;
     padding: 2rem;
+    
   }
   .grid-polaroids {
     display: flex;
@@ -477,7 +489,7 @@ button.next {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 2px solid #ffc1cc;
     border-radius: 10px;
-    max-width: 180px;
+    max-width: 250px;
   }
   .polaroid img {
     width: 100%;
@@ -486,6 +498,12 @@ button.next {
   .polaroid p {
     margin-top: 0.5rem;
     font-weight: bold;
+  }
+
+  .polaroids h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #e63950;
   }
 
 
