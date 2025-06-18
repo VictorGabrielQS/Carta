@@ -3,6 +3,13 @@
   font: inherit;
 }
 
+
+h2{
+     text-align: center;
+    font-size: 1.8rem;
+    color: #e63950;
+}
+
 /* Sections */
 .secao-carta{
   padding-bottom: 25rem;
@@ -32,7 +39,7 @@ b {
 body {
   margin: 0;
   min-height: 100dvh;
-  font-family: 'kode mono', cursive;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: #fad7df;
 }
 
@@ -42,9 +49,7 @@ h3 {
   text-wrap: balance;
 }
 
-h2{
-  font-size: 1.5rem;
-}
+
 
 p {
   text-wrap: pretty;
@@ -192,7 +197,7 @@ main {
     border-left: 45vw solid #ff989e;
     border-right: 45vw solid #ff989e;
     border-top: 22vw solid transparent;
-    border-bottom: 22vw solid #ff858a;
+    border-bottom: 30vw solid #ff858a;
   }
 
   .papel {
@@ -255,6 +260,11 @@ Galeria :
 .galeria {
   text-align: center;
   margin-top: 2rem;
+}
+
+.galeria h2{
+  font-size: 2rem;
+
 }
 
 .slider {
